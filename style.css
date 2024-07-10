@@ -492,17 +492,24 @@ footer li {
 /* mobile phone */
 
 @media (max-width: 576px) {
+  body.noscroll {
+    overflow: hidden;
+  }
   html {
     font-size: 60%;
   }
   .simply-countdown > .simply-section {
-    padding: 40px !important;
+    padding: 35px !important;
     margin: 3px !important;
   }
 
   .timeline li .timeline-image {
     width: 80px;
     height: 80px;
+  }
+
+  .bismilah {
+    width: 250px;
   }
 
   .timeline li .timeline-panel {
