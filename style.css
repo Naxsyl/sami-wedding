@@ -204,7 +204,7 @@ body {
 .gallery span,
 .gifts span {
   text-transform: uppercase;
-  color: #666;
+  color: var(--white);
   font-size: 0.9rem;
   letter-spacing: 1px;
   display: block;
@@ -319,16 +319,19 @@ body {
 /* Story end */
 
 /* Gallery Start */
-.gallery {
-  background-color: #ffd4e6;
+
+.gallery p,
+.gifts p {
+  color: var(--white);
 }
+
 /* Gallery End */
 /* Foto Untuk ukuran asli 1200 width x 768 */
 /* foto untuk ukuran thumnile 401 x 533  */
 
 /* Rsvp Start */
 .rsvp {
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
 }
 
 .rsvp h2 {
@@ -344,14 +347,14 @@ body {
 }
 
 .rsvp button {
-  background-color: var(--pink);
+  background-color: var(--emas);
   color: white;
-  border: 1px solid var(--pink);
+  border: 1px solid var(--emas);
 }
 
 .rsvp button:hover {
   background-color: white;
-  color: var(--pink);
+  color: var(--emas);
   border: 1px solid white;
 }
 /* Rsvp End */
@@ -359,7 +362,7 @@ body {
 /* Footer start */
 footer {
   padding: 3rem;
-  background-color: var(--pink);
+  background-color: var(--emas);
   color: white;
 }
 
@@ -492,15 +495,21 @@ footer li {
 /* mobile phone */
 
 @media (max-width: 576px) {
-  body.noscroll {
-    overflow: hidden;
-  }
   html {
     font-size: 60%;
   }
+
+  #hero {
+    align-items: start !important;
+  }
+
+  #hero main {
+    margin-top: 50px;
+  }
+
   .simply-countdown > .simply-section {
     padding: 35px !important;
-    margin: 3px !important;
+    margin: 2px !important;
   }
 
   .timeline li .timeline-image {
