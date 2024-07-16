@@ -24,6 +24,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <section
@@ -167,6 +170,17 @@
               Alamat : TK Yawarta, Jl. Kemandoran VIII No.6, RT.06/RW.11, Grogol
               Utara, Kec.Kby.Lama, Kota Jakarta Selatan
             </p>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.393242790043!2d106.78608279999999!3d-6.2117548000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f6cf7476846d%3A0x4ffd0f28e092db5c!2sTK%20yawarta!5e0!3m2!1sid!2sid!4v1721117791641!5m2!1sid!2sid"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
             <a
               href="https://maps.app.goo.gl/ziLa3Cn8no93nse39"
               target="_blank"
@@ -357,10 +371,7 @@
           <div class="col-md-8 col-10 text-center">
             <span>Memori Kisah Kami</span>
             <h2>Gallery Kami</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
-              est.
-            </p>
+            <p>Love Of Canvas</p>
           </div>
         </div>
 
@@ -498,6 +509,37 @@
             <button class="btn btn-primary">Kirim</button>
           </div>
         </form>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6">
+            <div id="disqus_thread"></div>
+            <script>
+              /**
+               *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+              /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+              (function () {
+                // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                  s = d.createElement("script");
+                s.src = "https://sami-wedding-1.disqus.com/embed.js";
+                s.setAttribute("data-timestamp", +new Date());
+                (d.head || d.body).appendChild(s);
+              })();
+            </script>
+            <noscript
+              >Please enable JavaScript to view the
+              <a href="https://disqus.com/?ref_noscript"
+                >comments powered by Disqus.</a
+              ></noscript
+            >
+          </div>
+        </div>
       </div>
     </section>
 
@@ -508,8 +550,8 @@
             <span>ungkapan tanda kasih</span>
             <h2>Kirim Hadiah</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Doloremque iure optio natus aspernatur tempora? Provident.
+              Jika berhalangan hadir, dapat mengirimkan hadiah ke no rekening di
+              bawah ini
             </p>
           </div>
         </div>
@@ -524,6 +566,13 @@
               <li class="list-group-item">
                 <div class="fw-bold">BCA</div>
                 2290248909 Sahrul Ramadan
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">
+                  Dan jika ingin mengirimkan hadiah bisa kirim ke alamat ini
+                </div>
+                Jl. Kemandoran VIII Gg. Keranti RT 10 RW 11 No. 110 Kel. Grogol
+                Utara Kec. Kebayoran Lama Jakarta Selatan 12210
               </li>
             </ul>
           </div>
@@ -685,9 +734,18 @@
       const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
 
       const namaContainer = document.querySelector(".hero h4 span");
-      namaContainer.innerText = `${pronoun} ${nama},`.replace(/,$/, ",");
+      namaContainer.innerText = `${pronoun} ${nama} & Partner,`.replace(
+        /,$/,
+        ","
+      );
 
       document.querySelector("#nama").value = nama;
+    </script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
